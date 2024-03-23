@@ -9,21 +9,118 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="manifest" href="site.webmanifest">
     <link rel="apple-touch-icon" href="icon.png">
-    <!-- Place favicon.ico in the root directory -->
+    <!-- todo: Place favicon.ico in the root directory -->
     <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
 </head>
 
 <body>
-    <!-- Your HTML content here -->
+    <h1 id="header">
+        <div id="page-title">Mudi</div>
+        <div id="nav">
+            <span id="charset-simplified"><a href="simplified.html">繁體</a></span>
+            <span id="menu-toggle"><img src="../img/hamburger_menu.svg"></span>
+            <ul id="nav-menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../remarks/index.html">Acknowledgements and Remarks 致谢与说明</a></li>
+                <li><a href="../prefaces/index.html">Prefaces 序</a></li>
+                <li><a href="../introduction/index.html">Introduction 简介</a></li>
+                <li><a href="../vocabulary/traditional.html">Read Along and Vocabulary 阅读与词汇</a></li>
+                <li><a href="../grammar/traditional.html">Grammar 语法</a></li>
+                <!-- todo: change to Mudi video -->
+                <li><a href="../captions/index.html">Animation 《牧笛》动画影片</a></li>
+                <li><a href="../composition/index.html">Discussion or Composition Topics  讨论、作文题目</a></li>
+                <li><a href="../exercises/index.html">Translation Exercises 翻译练习</a></li>
+                <li><a href="../appendices/index.html">Appendices 附录</a></li>
+                <li><a href="../resources/index.html">Illustrated Texts in PDF 插图本课文与生词</a></li>
+            </ul>
+        </div>
+    </h1>
+    <div id="book-container">
+        <div id="page-left">
+            <div id="grammer" class="scrollbox">
+                <p>Word Search: <input type="text" id="text-search" /> <audio src=""></audio></p> 
+            </div>
+        </div>
+    </div>
 </body>
 
+<!-- todo: clean up scripts -->
 <script src="js/vendor/jquery-3.1.1.min.js"></script>
 <script src="js/vendor/jquery-ui-1.12.1.min.js"></script>
 <script src="js/menu.js"></script>
 <script src="js/definitions.js"></script>
 <script src="js/main.js"></script>
-<script src="js/read-along.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $('#text-search').bind('keyup change', function (ev) {
+            // pull in the new value
+            var searchTerm = $(this).val();
+            // remove any old highlighted terms
+            $('body').removeHighlight();
+            // disable highlighting if empty
+            if (searchTerm) {
+                // highlight the new term
+                $('body').highlight(searchTerm);
+            }
+        });
+    });
+
+    $().ready(function () {
+        //hide sections
+        $('#sections div').hide();
+        var links = $('#myDropdown a');
+        links.click(function (e) {
+            var disp = e.currentTarget.href.split('#')[1];
+            var sections = $('#sections div');
+            sections.hide();
+            var tag = "#section-" + disp;
+            $(tag).show();
+            document.getElementById("myDropdown").classList.toggle("show");
+            return false;
+        });
+
+        //Add event handlers for audio playback
+        $('.audio-link').click(function (e) {
+            e.preventDefault();
+            var audioTag = $("audio").get(0);
+            var href = e.target.href ? e.target.href : e.target.parentNode.href;
+            audioTag.src = href;
+            audioTag.currentTime = 0;
+            audioTag.play();
+            console.log(href);
+            console.log(audioTag.duration)
+            return false;
+
+        });
+
+        //Add event handlers for video playback
+        $(function () {
+            $("#video-popup").dialog({
+                width: 360,
+                autoOpen: false,
+                modal: true,
+                close: function () {
+                    $("#video-popup video").get(0).pause();
+                }
+            });
+        });
+
+        $('.video-link').click(function (e) {
+            e.preventDefault();
+            var videoTag = $("#video-popup video").get(0);
+            console.log(videoTag);
+            var href = e.target.href ? e.target.href : e.target.parentNode.href;
+            videoTag.pause();
+            videoTag.children[0].src = href;
+            videoTag.load();
+            $("#video-popup").dialog("open");
+            videoTag.play();
+            return false;
+        });
+    });
+
+</script>
 
 </html>
