@@ -1,0 +1,366 @@
+{
+    "title": "Directional Complements",
+    "intro":"Directional Complements refer to a group of verbs of motion used as complements to principal verbs in sentences, indicting the principal verbs’ directions or orientations. There are two types of directional complements: simple directional complements and compound directional complements. Listed below are the most common and important directional complements in modern Chinese and the majority of those can be seen in the Mudi text.",
+    "sections": [
+        {
+            "id": 0,
+            "name": "Simple Directional Complement",
+            "header":"来、去、上、下、进、出、回、过、起",
+            "collapsible": [
+                {
+                    "title": "Simple Directional Complement: 来 、去",
+                    "body": {
+                        "explaination": "While the simple directional complement “来” indicates towards the speaker or a standpoint; “去,” the opposite, away from the speaker or a standpoint. ",
+                        "sentences":[
+                            {
+                                "number": 1,
+                                "sentence": "牧童骑在牛背上慢慢地从远处走来。",
+                                "audio":"./assets/audio/Sentence 1.mp3",
+                                "video":"./assets/video/Sentence 1.mp4"
+                            },
+                            {
+                                "number": 2,
+                                "sentence": "水牛上了岸，就快快地、自顾自地跑去吃草了。",
+                                "audio": "./assets/audio/Sentence 2.mp3",
+                                "video": "./assets/video/Sentence 2.mp4"
+                            },
+                            {
+                                "number": 3,
+                                "sentence": "在寂静中传来了几声悦耳的鸟鸣。",
+                                "audio": "./assets/audio/Sentence 3.mp3",
+                                "video": "./assets/video/Sentence 3.mp4"
+                            },
+                            {
+                                "number": 4,
+                                "sentence": "水牛抬起了头，往前走去。",
+                                "audio": "./assets/audio/Sentence 4.mp3",
+                                "video": "./assets/video/Sentence 4.mp4"
+                            },
+                            {
+                                "number": 5,
+                                "sentence": "牧童从树上下来了，走过一片芦苇，走上了山。",
+                                "audio": "./assets/audio/Sentence 5.mp3",
+                                "video": "./assets/video/Sentence 5.mp4"
+                            },
+                            {
+                                "number": 6,
+                                "sentence": "山路上走来了两个挑着柴的人。",
+                                "audio": "./assets/audio/Sentence 6.mp3",
+                                "video": "./assets/video/Sentence 6.mp4"
+                            },
+                            {
+                                "number": 7,
+                                "sentence": "柴夫给牧童指了下路，牧童立刻就朝那边跑去。",
+                                "audio": "./assets/audio/Sentence 7.mp3",
+                                "video": "./assets/video/Sentence 7.mp4"
+                            },
+                            {
+                                "number": 8,
+                                "sentence": "听到笛声，从高空云层中飞来了两只老鹰。",
+                                "audio": "./assets/audio/Sentence 8.mp3",
+                                "video": "./assets/video/Sentence 8.mp4"
+                            },
+                            {
+                                "number": 9,
+                                "sentence": "在不远处还有八只乌鸦。山石上、树枝上聚集着许多喜鹊，还有一些不知名的鸟也都飞来了。",
+                                "audio": "./assets/audio/Sentence 9.mp3",
+                                "video": "./assets/video/Sentence 9.mp4"
+                            },
+                            {
+                                "number": 10,
+                                "sentence": "最后，从远处飞来了成群的白鹤。",
+                                "audio": "./assets/audio/Sentence 10.mp3",
+                                "video": "./assets/video/Sentence 10.mp4"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "title": "Simple Directional Complement: 上 、下",
+                    "body": {
+                        "explaination": "While the simple directional complement “上” indicates an upward movement (i.e., movement from a lower point towards a higher point); “下,” the opposite, a downward movement (i.e., movement from a higher point towards a lower point).",
+                        "sentences": [
+                            {
+                                "number": 11,
+                                "sentence": "牧童爬上了树，枕着双手安静地躺在树桠上，还慢慢地荡着一只腿。",
+                                "audio":"./assets/audio/Sentence 11.mp3",
+                                "video":"./assets/video/Sentence 11.mp4"
+                            },
+                            {
+                                "number": 12,
+                                "sentence": "牧童从树上下来了，走过一片芦苇，走上了山。",
+                                "audio":"./assets/audio/Sentence 12.mp3",
+                                "video":"./assets/video/Sentence 12.mp4"
+                            },
+                            {
+                                "number": 13,
+                                "sentence": "他飞快地跑上山，最后爬上了一块大石头上。",
+                                "audio":"./assets/audio/Sentence 13.mp3",
+                                "video":"./assets/video/Sentence 13.mp4"
+                            },
+                            {
+                                "number": 14,
+                                "sentence": "牧童飞快地跑下山，从水这边的一块儿石头上猛地一下跳到了水牛的背上。",
+                                "audio":"./assets/audio/Sentence 14.mp3",
+                                "video":"./assets/video/Sentence 14.mp4"
+                            },
+                            {
+                                "number": 15,
+                                "sentence": "牧童砍下了一节竹子，(用镰刀)削了削。",
+                                "audio":"./assets/audio/Sentence 15.mp3",
+                                "video":"./assets/video/Sentence 15.mp4"
+                            },
+                            {
+                                "number": 16,
+                                "sentence": "他再一看，好像看见了什么，就赶紧跳下了树。",
+                                "audio":"./assets/audio/Sentence 16.mp3",
+                                "video":"./assets/video/Sentence 16.mp4"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "title": "Simple Directional Complement: 进 、出",
+                    "body":{
+                        "explaination": "While the simple directional complement “进” indicates an inward movement (i.e., entering,  from outside to inside); “出,” the opposite, indicates an outward movement (i.e., exiting, from inside to outside). ",
+                        "sentences":[
+                            {
+                                "number": 17,
+                                "sentence": "最后牧童取出笛子又吹了起来。",
+                                "audio": "./assets/audio/Sentence 17.mp3",
+                                "video": "./assets/video/Sentence 17.mp4"
+                            },
+                            {
+                                "number": 18,
+                                "sentence": "牧童取出了笛子，和着黄鹂的歌声，吹了起来。",
+                                "audio": "./assets/audio/Sentence 18.mp3",
+                                "video": "./assets/video/Sentence 18.mp4"
+                            },
+                            {
+                                "number": 19,
+                                "sentence": "牧童跑到水边的一块儿石头上，把一只脚放进水中。",
+                                "audio": "./assets/audio/Sentence 19.mp3",
+                                "video": "./assets/video/Sentence 19.mp4"
+                            },
+                            {
+                                "number": 20,
+                                "sentence": "最后把石头扔进了水里。",
+                                "audio": "./assets/audio/Sentence 20.mp3",
+                                "video": "./assets/video/Sentence 20.mp4"
+                            },
+                            {
+                                "number": 21,
+                                "sentence": "牧童从身上拿出了一把镰刀，使劲儿一砍，竹子倒了。",
+                                "audio": "./assets/audio/Sentence 21.mp3",
+                                "video": "./assets/video/Sentence 21.mp4"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "title": "Simple Directional Complement: 回",
+                    "body":{
+                        "explaination": "Simple directional complement “回” indicates the movement from elsewhere returning to the original place.",
+                        "sentences":[
+                            {
+                                "number": 22,
+                                "sentence": "原来是牧童坐回到了那块大石头上。",
+                                "audio": "./assets/audio/Sentence 22.mp3",
+                                "video": "./assets/video/Sentence 22.mp4"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "title": "Simple Directional Complement: 过",
+                    "body": {
+                        "explaination": "The simple directional complement “过” indicates that the subject of a sentence (a person, an animal, or any perceptible/movable object—such as a sound or a stone, changeable situation, etc.) passes through a place, moves towards a specific point, or departs a specific point for elsewhere.",
+                        "sentences": [
+                            {
+                                "number": 23,
+                                "sentence": "牧童从树上下来了，走过一片芦苇，走上了山。",
+                                "audio": "./assets/audio/Sentence 23.mp3",
+                                "video": "./assets/video/Sentence 23.mp4"
+                            },
+                            {
+                                "number": 24,
+                                "sentence": "(这一下)水牛转过身就跑了。",
+                                "audio": "./assets/audio/Sentence 24.mp3",
+                                "video": "./assets/video/Sentence 24.mp4"
+                            },
+                            {
+                                "number": 25,
+                                "sentence": "笛声穿过竹林，传到水边。",
+                                "audio": "./assets/audio/Sentence 25.mp3",
+                                "video": "./assets/video/Sentence 25.mp4"
+                            },
+                            {
+                                "number": 26,
+                                "sentence": "水牛慢慢地转过头，聚精会神地听着。",
+                                "audio": "./assets/audio/Sentence 26.mp3",
+                                "video": "./assets/video/Sentence 26.mp4"
+                            },
+                            {
+                                "number": 27,
+                                "sentence": "水牛穿过竹林，走到牧童身后。",
+                                "audio": "./assets/audio/Sentence 27.mp3",
+                                "video": "./assets/video/Sentence 27.mp4"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "title": "Simple Directional Complement: 起",
+                    "body":{
+                        "explaination":"The simple directional complement “起” indicates that an action’s direction or orientation is upward (i.e., from a lower point to a higher point).",
+                        "sentences":[
+                            {
+                                "number": 28,
+                                "sentence": "水牛抬起了头，往前走去。",
+                                "audio": "./assets/audio/Sentence 28.mp3",
+                                "video": "./assets/video/Sentence 28.mp4"
+                            },
+                            {
+                                "number": 29,
+                                "sentence": "捡起了一块儿石头，。",
+                                "audio": "./assets/audio/Sentence 29.mp3",
+                                "video": "./assets/video/Sentence 29.mp4"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "name": "Compound Directional Complement",
+            "header":"With来: 上来、下来、进来、出来、回来、过来、起来 \n With 去: 上去、下去、进去、出去、回去、过去",
+            "collapsible":[
+                {
+                    "title": "Compound Directional Complement: 上来、上去",
+                    "body":{
+                        "explaination":"The compound directional complement “上来” indicates that the performer of an action, through the action, is moving from a lower place to a higher place; and the standpoint is at the higher place. The compound directional complement “上去” indicates that the performer of an action, through the action, is moving from a lower place to a higher place; but the standpoint is at the lower place. It can also indicate that the performer of an action, through the action, departs from the original place, moving towards another place. There are two sentences in the Mudi text, illustrating this second usage of “上去”. ",
+                        "sentences":[
+                            {
+                                "number": 30,
+                                "sentence": "山路上走来了两个挑着柴的人，牧童迎上去。",
+                                "audio": "./assets/audio/Sentence 30.mp3",
+                                "video": "./assets/video/Sentence 30.mp4"
+                            },
+                            {
+                                "number": 31,
+                                "sentence": "牧童追上去，想拉住水牛的尾巴。",
+                                "audio": "./assets/audio/Sentence 31.mp3",
+                                "video": "./assets/video/Sentence 31.mp4"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "title": "Compound Directional Complement: 下来、下去",
+                    "body":{
+                        "explaination":"The compound directional complement “下来” indicates that the performer of an action, through the action, is moving from a higher place to a lower place; and the standpoint (or viewpoint) is at the lower place. It can also indicate that the performer of an action, through the action, departs from the original place, moving towards another place, no longer at the original place. The compound directional complement “下去” indicates that the performer of an action, through the action, is moving from a higher place towards a lower place; but the standpoint (or viewpoint) is at the higher place. The following sentences from the Mudi text illustrate some aspects of the usages of the compound directional complement “下来”. ",
+                        "sentences":[
+                            {
+                                "number": 32,
+                                "sentence": "牧童又躺了下来。",
+                                "audio": "./assets/audio/Sentence 32.mp3",
+                                "video": "./assets/video/Sentence 32.mp4"
+                            },
+                            {
+                                "number": 33,
+                                "sentence": "牧童好像被他四周的景色给迷住了，慢慢地趴下来，呆呆地看着。瀑布从山石上一节儿一节儿地流下来。",
+                                "audio": "./assets/audio/Sentence 33.mp3",
+                                "video": "./assets/video/Sentence 33.mp4"
+                            },
+                            {
+                                "number": 34,
+                                "sentence": "(牧童… 猛地一下跳到了水牛的背上。) 躺在那儿的水牛吓了一跳，一下子就把牧童给甩了下来，再定睛一看，被甩下来的原来是牧童！",
+                                "audio": "./assets/audio/Sentence 34.mp3",
+                                "video": "./assets/video/Sentence 34.mp4"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "title": "Compound Directional Complement: 回来、回去",
+                    "body":{
+                        "explaination":"The compound directional complement “回来” indicates that the direction of the action is from elsewhere returning to the original place, towards the speaker/narrator. The compound directional complement “回去” also indicates that the direction of the action is from elsewhere returning to the original place, but away from the speaker/narrator. ",
+                        "sentences":[
+                            {
+                                "number": 35,
+                                "sentence": "鱼又游回来了，在水牛的面前游来游去。",
+                                "audio": "./assets/audio/Sentence 35.mp3",
+                                "video": "./assets/video/Sentence 35.mp4"
+                            },
+                            {
+                                "number": 36,
+                                "sentence": "可是还没走几步，水牛又退了回来，好像不愿意离开这美景似的。",
+                                "audio": "./assets/audio/Sentence 36.mp3",
+                                "video": "./assets/video/Sentence 36.mp4"
+                            },
+                            {
+                                "number": 37,
+                                "sentence": "听到这优美的笛声，飞走的小鸟又飞回来了。",
+                                "audio": "./assets/audio/Sentence 37.mp3",
+                                "video": "./assets/video/Sentence 37.mp4"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "title": "Compound Directional Complement: 过来、过去",
+                    "body":{
+                        "explaination":"The compound directional complement “过来” indicates that the performer of an action, through the action, is passing a place or is moving towards the direction of the speaker/narrator. It can also indicate that the performer of an action, through the action, changes its original direction, now facing the direction of the speaker/narrator. The compound directional complement “过去” indicates that the performer of an action, through the action, is either passing a place or is turning towards a different place. It can also indicate that the performer of an action, through the action, changes its original direction, now facing the opposite direction of the speaker/narrator.",
+                        "sentences":[
+                            {
+                                "number": 38,
+                                "sentence": "然后捡起了一块儿石头，好像要朝水牛那边扔过去。",
+                                "audio": "./assets/audio/Sentence 38.mp3",
+                                "video": "./assets/video/Sentence 38.mp4"
+                            },
+                            {
+                                "number": 39,
+                                "sentence": "这时，吃草的水牛也回过头来。",
+                                "audio": "./assets/audio/Sentence 39.mp3",
+                                "video": "./assets/video/Sentence 39.mp4"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "title": "Compound Directional Complement: 起来",
+                    "body":{
+                        "explaination":"The compound directional complement “起来” indicates that the performer of an action, through the action, is moving from a lower place to a higher place. ",
+                        "sentences":[
+                            {
+                                "number": 40,
+                                "sentence": "睡梦中的牧童在树桠上站了起来。",
+                                "audio": "./assets/audio/Sentence 40.mp3",
+                                "video": "./assets/video/Sentence 40.mp4"
+                            },
+                            {
+                                "number": 41,
+                                "sentence": "牧童坐了起来。",
+                                "audio": "./assets/audio/Sentence 41.mp3",
+                                "video": "./assets/video/Sentence 41.mp4"
+                            },
+                            {
+                                "number": 42,
+                                "sentence": "躺在水中大石头上的水牛听到笛声，站了起来。",
+                                "audio": "./assets/audio/Sentence 42.mp3",
+                                "video": "./assets/video/Sentence 42.mp4"
+                            },
+                            {
+                                "number": 43,
+                                "sentence": "牧童醒了，揉揉眼睛，慢慢地站了起来。",
+                                "audio": "./assets/audio/Sentence 43.mp3",
+                                "video": "./assets/video/Sentence 43.mp4"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}
