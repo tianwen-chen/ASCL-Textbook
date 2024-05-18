@@ -39,6 +39,7 @@
     </h1>
     <div id="book-container">
         <div id="page-left">
+            <!-- TODO - word search -->
             <!-- Move the text input outside of the JavaScript loop -->
             <div id="grammer" class="scrollbox">
             <p id="left-head">Word Search: <input type="text" id="text-search" /> <audio src=""></audio></p>
@@ -62,21 +63,73 @@
                         })
                         .catch(error => console.error('Error fetching JSON:', error));
                 </script>
+                <!-- add word search js -->
+                <script>
+                    // FIXME - word search function not working
+                    function wordSearch() {
+                        // Get the search input value
+                        const searchInput = document.getElementById('text-search').value;
+                    
+                        // Get all the paragraphs in the book container
+                        const paragraphs = document.querySelectorAll('#left-head p');
+                    
+                        // Loop through each paragraph
+                        paragraphs.forEach(paragraph => {
+                            // Get the paragraph text content
+                            const text = paragraph.textContent;
+                    
+                            // Check if the search input value is in the paragraph text
+                            if (text.includes(searchInput)) {
+                                // Highlight the search input value in the paragraph text
+                                paragraph.innerHTML = text.replace(
+                                    new RegExp(searchInput, 'gi'),
+                                    match => `<mark>${match}</mark>`
+                                );
+                            } else {
+                                // Remove the highlight from the paragraph text
+                                paragraph.innerHTML = text;
+                            }
+                        });
+                    }
+
+                    // Add event listener to the search input
+                    const searchInput = document.getElementById('text-search');
+                    searchInput.addEventListener('input', wordSearch);
+                </script>
             </div>
         </div>
-        <!-- todo: look into page divider -->
+        <!-- TODO - create page div function -->
+        <!-- <script>
+            function createPageDivider() {
+                const pageDivider = document.createElement('div');
+                pageDivider.id = 'page-divider';
+
+                for (let i = 0; i < 10; i++) {
+                    const img = document.createElement('img');
+                    img.src = './assets/img/book_binding_thread.svg';
+                    pageDivider.appendChild(img);
+                }
+
+                return pageDivider;
+            }
+
+            const pageRight = document.getElementById('page-right');
+            const pageDivider = createPageDivider();
+            pageRight.appendChild(pageDivider);
+        </script> -->
         <div id="page-divider">
-            <div><img src="./assets/img/thread.svg"></div>
-            <div><img src="./assets/img/thread.svg"></div>
-            <div><img src="./assets/img/thread.svg"></div>
-            <div><img src="./assets/img/thread.svg"></div>
-            <div><img src="./assets/img/thread.svg"></div>
-            <div><img src="./assets/img/thread.svg"></div>
-            <div><img src="./assets/img/thread.svg"></div>
-            <div><img src="./assets/img/thread.svg"></div>
-            <div><img src="./assets/img/thread.svg"></div>
-            <div><img src="./assets/img/thread.svg"></div>
+            <div><img src="./assets/img/book_binding_thread.svg"></div>
+            <div><img src="./assets/img/book_binding_thread.svg"></div>
+            <div><img src="./assets/img/book_binding_thread.svg"></div>
+            <div><img src="./assets/img/book_binding_thread.svg"></div>
+            <div><img src="./assets/img/book_binding_thread.svg"></div>
+            <div><img src="./assets/img/book_binding_thread.svg"></div>
+            <div><img src="./assets/img/book_binding_thread.svg"></div>
+            <div><img src="./assets/img/book_binding_thread.svg"></div>
+            <div><img src="./assets/img/book_binding_thread.svg"></div>
+            <div><img src="./assets/img/book_binding_thread.svg"></div>
         </div>
+        
         <div id="page-right">
             <div class="row demo-section scrollbox">
                 <!-- todo: what is c10?? -->
@@ -147,6 +200,7 @@
                                 
                                     return td;
                                 }
+                                // REVIEW - video element format
                                 function createVideoElement(videoLink) {
                                     // Create a td element
                                     const td = document.createElement('td');
@@ -181,6 +235,7 @@
                                     return td;
                                 }
                                 // function to construct the collapsible elements
+                                // TODO - collapsible cursor pointer css not working
                                 function renderCollapsible(item) {
                                     // Create a div element for the collapsible item
                                     const div = document.createElement('div');
@@ -321,7 +376,7 @@
 <script src="js/vendor/jquery-3.1.1.min.js"></script>
 <script src="js/vendor/jquery-ui-1.12.1.min.js"></script>
 <script src="js/menu.js"></script>
-<script src="js/definitions.js"></script>
+<!-- <script src="js/definitions.js"></script> -->
 <script src="js/main.js"></script>
 <script type="text/javascript">
     $(function () {

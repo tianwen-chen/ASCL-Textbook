@@ -76,7 +76,7 @@ body {
     flex-wrap: nowrap;
     border: 3px solid black;
     background-color: #f9d8ac;
-    background-image: url("../img/natural-paper.png");
+    background-image: url("../assets/img/natural-paper.png");
     font-family: 'Noto Serif', Helvetica, sans-serif;
     height: 90vh;
 }
@@ -88,7 +88,7 @@ body {
 
 #book-container > #page-divider{
     flex: 0 0 70px;
-    background: url('../img/page_gutter.svg') repeat-y center top;
+    background: url('../assets/img/page_gutter.svg') repeat-y center top;
     padding: 0;
     margin: 0;
 }
