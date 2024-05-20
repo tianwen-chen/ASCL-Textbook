@@ -16,10 +16,16 @@
 </head>
 
 <body>
+    <!-- include converting js script -->
+    <!-- TODO - clean up js -->
+    <script src="https://cdn.jsdelivr.net/npm/opencc-js@1/dist/opencc.min.js"></script>
     <h1 id="header">
         <div id="page-title">Mudi</div>
         <div id="nav">
-            <span id="charset-simplified"><a href="simplified.html">繁體</a></span>
+            <!-- TODO - CSS for this button -->
+            <button id="convert">简繁</button>
+            <!-- TODO - converter script -->
+            <!-- <span id="charset-simplified"><a href="simplified.html">繁體</a></span> -->
             <span id="menu-toggle"><img src="./assets/img/hamburger_menu.svg"></span>
             <ul id="nav-menu">
                 <li><a href="../index.html">Home</a></li>
@@ -278,6 +284,8 @@
                                     // Add an event listener to the title to toggle the display of the body
                                     span.addEventListener('click', function() {
                                         ul.style.display = ul.style.display === 'none' ? 'block' : 'none';
+                                        // let the toggle be "caret-down" when clicked
+                                        span.classList.toggle('caret-down');
                                     });
                                     // todo - the effect of cursor pointer is not working
                                     /*
