@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Mudi Courseware</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.svg">
+    <!-- todo: Place favicon.ico in the root directory -->
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
+</head>
+
+<body>
+    <!-- include converting js script -->
+    <script src="https://cdn.jsdelivr.net/npm/opencc-js@1/dist/opencc.min.js"></script>
+    <h1 id="header">
+        <div id="page-title">Mudi</div>
+        <div id="nav">
+            <button id="convert">简繁</button>
+            <!-- TODO - converter script -->
+            <span id="charset-simplified"><a href="./index_simplified.html">简体</a></span>
+            <span id="menu-toggle"><img src="./assets/img/hamburger_menu.svg"></span>
+            <ul id="nav-menu">
+                <!-- TODO - change navigation links -->
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../remarks/index.html">Acknowledgements and Remarks 致谢与说明</a></li>
+                <li><a href="../prefaces/index.html">Prefaces 序</a></li>
+                <li><a href="../introduction/index.html">Introduction 简介</a></li>
+                <li><a href="../vocabulary/traditional.html">Read Along and Vocabulary 阅读与词汇</a></li>
+                <li><a href="../grammar/traditional.html">Grammar 语法</a></li>
+                <li><a href="../captions/index.html">Animation 《牧笛》动画影片</a></li>
+                <li><a href="../composition/index.html">Discussion or Composition Topics  讨论、作文题目</a></li>
+                <li><a href="../exercises/index.html">Translation Exercises 翻译练习</a></li>
+                <li><a href="../appendices/index.html">Appendices 附录</a></li>
+                <li><a href="../resources/index.html">Illustrated Texts in PDF 插图本课文与生词</a></li>
+            </ul>
+        </div>
+    </h1>
+    <div id="book-container">
+        <div id="page-left">
+            <!-- Move the text input outside of the JavaScript loop -->
+            <div id="grammer" class="scrollbox">
+            <p id="left-head">Word Search: <input type="text" id="text-search" /> <audio src=""></audio></p>
+                <script>
+                    // Fetch the JSON file
+                    fetch('./assets/data/text_traditional.json')
+                        .then(response => response.json())
+                        .then(data => {
+                            // Get the book container element
+                            const bookContainer = document.getElementById('left-head');
+                    
+                            // Loop through each paragraph in the JSON data
+                            data.simplified.forEach(paragraph => {
+                                // Create a <p> element for each paragraph
+                                const p = document.createElement('p');
+                                // Set the text content of the <p> element to the paragraph text
+                                p.textContent = paragraph.paragraph;
+                                // Append the <p> element to the book container
+                                bookContainer.appendChild(p);
+                            });
+                        })
+                        .catch(error => console.error('Error fetching JSON:', error));
+                </script>
+                <!-- add word search js -->
+                <script>
+                    function wordSearch() {
+                        // Get the search input value
+                        const searchInput = document.getElementById('text-search').value;
+                    
+                        // Get all the paragraphs in the book container
+                        const paragraphs = document.querySelectorAll('#left-head p');
+                    
+                        // Loop through each paragraph
+                        paragraphs.forEach(paragraph => {
+                            // Get the paragraph text content
+                            const text = paragraph.textContent;
+                    
+                            // Check if the search input value is in the paragraph text
+                            if (text.includes(searchInput)) {
+                                // Highlight the search input value in the paragraph text
+                                paragraph.innerHTML = text.replace(
+                                    new RegExp(searchInput, 'gi'),
+                                    match => `<mark>${match}</mark>`
+                                );
+                            } else {
+                                // Remove the highlight from the paragraph text
+                                paragraph.innerHTML = text;
+                            }
+                        });
+                    }
+
+                    // Add event listener to the search input
+                    const searchInput = document.getElementById('text-search');
+                    searchInput.addEventListener('input', wordSearch);
+                </script>
+            </div>
+        </div>
+
+        <div id="page-divider">
+            <div><img src="./assets/img/book_binding_thread.svg"></div>
+            <div><img src="./assets/img/book_binding_thread.svg"></div>
+            <div><img src="./assets/img/book_binding_thread.svg"></div>
+            <div><img src="./assets/img/book_binding_thread.svg"></div>
+            <div><img src="./assets/img/book_binding_thread.svg"></div>
+            <div><img src="./assets/img/book_binding_thread.svg"></div>
+            <div><img src="./assets/img/book_binding_thread.svg"></div>
+            <div><img src="./assets/img/book_binding_thread.svg"></div>
+            <div><img src="./assets/img/book_binding_thread.svg"></div>
+            <div><img src="./assets/img/book_binding_thread.svg"></div>
+        </div>
+        
+        <div id="page-right">
+            <div class="row demo-section scrollbox">
+                <!-- todo: what is c10?? -->
+                <div class="c10">
+                    <!-- first render the "title" field in document grammar_traditional.json as h2 -->
+                    <h2 id="title">
+                        <script>
+                            // Fetch the JSON file
+                            fetch('./assets/data/grammar_traditional.json')
+                                .then(response => response.json())
+                                .then(data => {
+                                    // Get the title element
+                                    const title = document.getElementById('title');
+                                    // Set the text content of the title element to the title field in the JSON data
+                                    title.textContent = data.title;
+                                })
+                                .catch(error => console.error('Error fetching JSON:', error));
+                        </script>
+                    </h2>
+                    <!-- then render the "intro" filed as paragraph -->
+                    <p id="intro">
+                        <script>
+                            // Fetch the JSON file
+                            fetch('./assets/data/grammar_traditional.json')
+                                .then(response => response.json())
+                                .then(data => {
+                                    // Get the intro element
+                                    const intro = document.getElementById('intro');
+                                    // Set the text content of the intro element to the intro field in the JSON data
+                                    intro.textContent = data.intro;
+                                })
+                                .catch(error => console.error('Error fetching JSON:', error));
+                        </script>
+                    </p>
+                    <!-- then create a drop down menu with name called "See Grammar", if click on it you will see all the choices rendered by each element's 
+                    "name" field in "sections" -->
+                    <div class="dropdown">
+                        <button onclick="myFunction()" class="dropbtn">See Grammar</button>
+                        <div id="myDropdown" class="dropdown-content">
+                            <script>
+                                // reusable component for audio and video links
+                                function createAudioElement(audioLink) {
+                                    // Create a td element
+                                    const td = document.createElement('td');
+                                
+                                    // Create an a element for the audio link
+                                    const a = document.createElement('a');
+                                    a.href = '#';
+                                    a.onclick = function(e) {
+                                        e.preventDefault(); // Prevent the default action
+                                
+                                        // Create an audio element
+                                        const audio = new Audio(audioLink);
+                                
+                                        // Play the audio
+                                        audio.play();
+                                    };
+                                
+                                    // Create an img element for the audio button
+                                    const img = document.createElement('img');
+                                    img.src = './assets/img/audio_button.png';
+                                
+                                    // Append the img element to the a element
+                                    a.appendChild(img);
+                                
+                                    // Append the a element to the td element
+                                    td.appendChild(a);
+                                
+                                    return td;
+                                }
+                                function createVideoElement(videoLink) {
+                                    // Create a td element
+                                    const td = document.createElement('td');
+                                
+                                    // Create an a element for the video link
+                                    const a = document.createElement('a');
+                                    a.className = 'video-link';
+                                    a.href = '#';
+                                    a.onclick = function() {
+                                        // Create a video element
+                                        const video = document.createElement('video');
+                                        video.src = videoLink;
+                                        video.controls = true;
+                                
+                                        // Create a popup for the video player
+                                        const popup = window.open('', 'VideoPopup', 'width=400,height=300');
+                                        popup.document.body.appendChild(video);
+                                
+                                        return false; // Prevent the default action
+                                    };
+                                
+                                    // Create an img element for the video button
+                                    const img = document.createElement('img');
+                                    img.src = './assets/img/video_button.png';
+                                
+                                    // Append the img element to the a element
+                                    a.appendChild(img);
+                                
+                                    // Append the a element to the td element
+                                    td.appendChild(a);
+                                
+                                    return td;
+                                }
+                                // function to construct the collapsible elements
+                                function renderCollapsible(item) {
+                                    // Create a div element for the collapsible item
+                                    const div = document.createElement('div');
+                                
+                                    // Create and append a span element for the title
+                                    const span = document.createElement('span');
+                                    span.className = 'caret';
+                                    span.textContent = item.title;
+                                    div.appendChild(span);
+                                
+                                    // Create and append a ul element for the body
+                                    const ul = document.createElement('ul');
+                                    ul.className = 'nested';
+                                    ul.style.display = 'none'; // Initially hide the body
+                                    const p = document.createElement('p');
+                                    p.textContent = item.body.explaination;
+                                    // create a table to hold the sentences, audio and video links
+                                    const sentences = document.createElement('table');
+                                    var i = 1; // counter for the sentences
+                                    item.body.sentences.forEach(sentence => {
+                                        const tr = document.createElement('tr');
+                                        const td1 = document.createElement('td');
+                                        td1.textContent = i + '. ' + sentence.sentence;
+                                        tr.appendChild(td1);
+                                        if (sentence.audio) {
+                                            const td2 = createAudioElement(sentence.audio);
+                                            tr.appendChild(td2);
+                                        }
+                                        if (sentence.video) {
+                                            const td3 = createVideoElement(sentence.video);
+                                            tr.appendChild(td3);
+                                        }
+                                        sentences.appendChild(tr);
+                                        i++;
+                                    });
+                                    ul.appendChild(p);
+                                    ul.appendChild(sentences);
+                                    div.appendChild(ul);
+                                
+                                    // Add an event listener to the title to toggle the display of the body
+                                    span.addEventListener('click', function() {
+                                        ul.style.display = ul.style.display === 'none' ? 'block' : 'none';
+                                        // let the toggle be "caret-down" when clicked
+                                        span.classList.toggle('caret-down');
+                                    });
+                                    // todo - the effect of cursor pointer is not working
+                                    /*
+                                    var toggler = document.getElementsByClassName("caret");
+                                    var i;
+
+                                    for (i = 0; i < toggler.length; i++) {
+                                        toggler[i].addEventListener("click", function() {
+                                            this.parentElement.querySelector(".nested").classList.toggle("active");
+                                            this.classList.toggle("caret-down");
+                                        });
+                                    }*/
+                                
+                                    return div;
+                                }
+                                // dynamically render the section content when clicked on the dropdown menu
+                                function renderSection(section) {
+                                    const sections = document.getElementById('display-section');
+                                    sections.innerHTML = '';
+                                    // create the name and header of the section (this part will always be displayed)
+                                    const div = document.createElement('div');
+                                    const sec_name = document.createElement('h3');
+                                    sec_name.textContent = section.name;
+                                    div.appendChild(sec_name);
+                                    const sec_header = document.createElement('p');
+                                    sec_header.textContent = section.header;
+                                    div.appendChild(sec_header);
+                                    // display the title for all the collapsible elements
+                                    const sec_collapsible = document.createElement('div');
+                                    sec_collapsible.className = 'collapsible';
+                                    section.collapsible.forEach(item => {
+                                        sec_collapsible.appendChild(renderCollapsible(item));
+                                    });
+                                    div.appendChild(sec_collapsible);
+                                    // re-render the div
+                                    sections.appendChild(div);
+                                }
+                                // Fetch the JSON file
+                                fetch('./assets/data/grammar_traditional.json')
+                                    .then(response => response.json())
+                                    .then(data => {
+                                        // Get the dropdown element
+                                        const dropdown = document.getElementById('myDropdown');
+                                        data.sections.forEach(section => {
+                                            const a = document.createElement('a');
+                                            a.textContent = section.name;
+                                            dropdown.appendChild(a);
+                
+                                            // onclick event to display the section content
+                                            a.addEventListener('click', function(event) {
+                                                event.preventDefault();
+                                                console.log('Clicked section:', section.name);
+                                                renderSection(section);
+                                            });
+                                        });
+                                    })
+                                    .catch(error => console.error('Error fetching JSON:', error));
+                            </script>
+                        </div>
+                    </div>
+                    <script>
+                        /* When the user clicks on the button,
+                        toggle between hiding and showing the dropdown content */
+                        function myFunction() {
+                            document.getElementById("myDropdown").classList.toggle("show");
+                        }
+                        // Close the dropdown menu if the user clicks outside of it
+                        window.onclick = function(event) {
+                            if (!event.target.matches('.dropbtn')) {
+                                var dropdowns = document.getElementsByClassName("dropdown-content");
+                                var i;
+                                for (i = 0; i < dropdowns.length; i++) {
+                                    var openDropdown = dropdowns[i];
+                                    if (openDropdown.classList.contains('show')) {
+                                        openDropdown.classList.remove('show');
+                                    }
+                                }
+                            }
+                        }
+                    </script>
+                    <!-- when the dropdown menu is shown, wait for the user to click on any of the sections element, render the name of element selected if clicked -->
+                    <div id="display-section">
+
+                        <!-- display the div we just created -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+                    
+    </div>
+    
+</body>
+
+<!-- todo: clean up scripts -->
+<script src="js/vendor/jquery-3.1.1.min.js"></script>
+<script src="js/vendor/jquery-ui-1.12.1.min.js"></script>
+<script src="js/menu.js"></script>
+<!-- <script src="js/definitions.js"></script> -->
+<script src="js/main.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $('#text-search').bind('keyup change', function (ev) {
+            // pull in the new value
+            var searchTerm = $(this).val();
+            // remove any old highlighted terms
+            $('body').removeHighlight();
+            // disable highlighting if empty
+            if (searchTerm) {
+                // highlight the new term
+                $('body').highlight(searchTerm);
+            }
+        });
+    });
+
+    $().ready(function () {
+        //hide sections
+        $('#sections div').hide();
+        var links = $('#myDropdown a');
+        links.click(function (e) {
+            var disp = e.currentTarget.href.split('#')[1];
+            var sections = $('#sections div');
+            sections.hide();
+            var tag = "#section-" + disp;
+            $(tag).show();
+            document.getElementById("myDropdown").classList.toggle("show");
+            return false;
+        });
+
+        //Add event handlers for audio playback
+        $('.audio-link').click(function (e) {
+            e.preventDefault();
+            var audioTag = $("audio").get(0);
+            var href = e.target.href ? e.target.href : e.target.parentNode.href;
+            audioTag.src = href;
+            audioTag.currentTime = 0;
+            audioTag.play();
+            console.log(href);
+            console.log(audioTag.duration)
+            return false;
+
+        });
+
+        //Add event handlers for video playback
+        $(function () {
+            $("#video-popup").dialog({
+                width: 360,
+                autoOpen: false,
+                modal: true,
+                close: function () {
+                    $("#video-popup video").get(0).pause();
+                }
+            });
+        });
+
+        $('.video-link').click(function (e) {
+            e.preventDefault();
+            var videoTag = $("#video-popup video").get(0);
+            console.log(videoTag);
+            var href = e.target.href ? e.target.href : e.target.parentNode.href;
+            videoTag.pause();
+            videoTag.children[0].src = href;
+            videoTag.load();
+            $("#video-popup").dialog("open");
+            videoTag.play();
+            return false;
+        });
+    });
+
+</script>
+
+</html>

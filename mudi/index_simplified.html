@@ -17,24 +17,22 @@
 
 <body>
     <!-- include converting js script -->
-    <!-- TODO - clean up js -->
     <script src="https://cdn.jsdelivr.net/npm/opencc-js@1/dist/opencc.min.js"></script>
     <h1 id="header">
         <div id="page-title">Mudi</div>
         <div id="nav">
-            <!-- TODO - CSS for this button -->
             <button id="convert">简繁</button>
             <!-- TODO - converter script -->
-            <!-- <span id="charset-simplified"><a href="simplified.html">繁體</a></span> -->
+            <span id="charset-simplified"><a href="./index_traditional.html">繁體</a></span>
             <span id="menu-toggle"><img src="./assets/img/hamburger_menu.svg"></span>
             <ul id="nav-menu">
+                <!-- TODO - change navigation links -->
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="../remarks/index.html">Acknowledgements and Remarks 致谢与说明</a></li>
                 <li><a href="../prefaces/index.html">Prefaces 序</a></li>
                 <li><a href="../introduction/index.html">Introduction 简介</a></li>
                 <li><a href="../vocabulary/traditional.html">Read Along and Vocabulary 阅读与词汇</a></li>
                 <li><a href="../grammar/traditional.html">Grammar 语法</a></li>
-                <!-- todo: change to Mudi video -->
                 <li><a href="../captions/index.html">Animation 《牧笛》动画影片</a></li>
                 <li><a href="../composition/index.html">Discussion or Composition Topics  讨论、作文题目</a></li>
                 <li><a href="../exercises/index.html">Translation Exercises 翻译练习</a></li>
@@ -45,13 +43,12 @@
     </h1>
     <div id="book-container">
         <div id="page-left">
-            <!-- TODO - word search -->
             <!-- Move the text input outside of the JavaScript loop -->
             <div id="grammer" class="scrollbox">
             <p id="left-head">Word Search: <input type="text" id="text-search" /> <audio src=""></audio></p>
                 <script>
                     // Fetch the JSON file
-                    fetch('./assets/data/text.json')
+                    fetch('./assets/data/text_simplified.json')
                         .then(response => response.json())
                         .then(data => {
                             // Get the book container element
@@ -71,7 +68,6 @@
                 </script>
                 <!-- add word search js -->
                 <script>
-                    // FIXME - word search function not working
                     function wordSearch() {
                         // Get the search input value
                         const searchInput = document.getElementById('text-search').value;
@@ -104,25 +100,7 @@
                 </script>
             </div>
         </div>
-        <!-- TODO - create page div function -->
-        <!-- <script>
-            function createPageDivider() {
-                const pageDivider = document.createElement('div');
-                pageDivider.id = 'page-divider';
 
-                for (let i = 0; i < 10; i++) {
-                    const img = document.createElement('img');
-                    img.src = './assets/img/book_binding_thread.svg';
-                    pageDivider.appendChild(img);
-                }
-
-                return pageDivider;
-            }
-
-            const pageRight = document.getElementById('page-right');
-            const pageDivider = createPageDivider();
-            pageRight.appendChild(pageDivider);
-        </script> -->
         <div id="page-divider">
             <div><img src="./assets/img/book_binding_thread.svg"></div>
             <div><img src="./assets/img/book_binding_thread.svg"></div>
@@ -140,11 +118,11 @@
             <div class="row demo-section scrollbox">
                 <!-- todo: what is c10?? -->
                 <div class="c10">
-                    <!-- first render the "title" field in document grammar.json as h2 -->
+                    <!-- first render the "title" field in document grammar_simplified.json as h2 -->
                     <h2 id="title">
                         <script>
                             // Fetch the JSON file
-                            fetch('./assets/data/grammar.json')
+                            fetch('./assets/data/grammar_simplified.json')
                                 .then(response => response.json())
                                 .then(data => {
                                     // Get the title element
@@ -159,7 +137,7 @@
                     <p id="intro">
                         <script>
                             // Fetch the JSON file
-                            fetch('./assets/data/grammar.json')
+                            fetch('./assets/data/grammar_simplified.json')
                                 .then(response => response.json())
                                 .then(data => {
                                     // Get the intro element
@@ -206,7 +184,6 @@
                                 
                                     return td;
                                 }
-                                // REVIEW - video element format
                                 function createVideoElement(videoLink) {
                                     // Create a td element
                                     const td = document.createElement('td');
@@ -241,7 +218,6 @@
                                     return td;
                                 }
                                 // function to construct the collapsible elements
-                                // TODO - collapsible cursor pointer css not working
                                 function renderCollapsible(item) {
                                     // Create a div element for the collapsible item
                                     const div = document.createElement('div');
@@ -324,7 +300,7 @@
                                     sections.appendChild(div);
                                 }
                                 // Fetch the JSON file
-                                fetch('./assets/data/grammar.json')
+                                fetch('./assets/data/grammar_simplified.json')
                                     .then(response => response.json())
                                     .then(data => {
                                         // Get the dropdown element
