@@ -179,8 +179,8 @@
                             {
                                 "number": 23,
                                 "sentence": "牧童从树上下来了，走过一片芦苇，走上了山。",
-                                "audio": "./assets/audio/Sentence 23.mp3",
-                                "video": "./assets/video/Sentence 23.mp4"
+                                "audio": "./assets/audio/Sentence 5.mp3",
+                                "video": "./assets/video/Sentence 5.mp4"
                             },
                             {
                                 "number": 24,
@@ -217,12 +217,12 @@
                             {
                                 "number": 28,
                                 "sentence": "水牛抬起了头，往前走去。",
-                                "audio": "./assets/audio/Sentence 28.mp3",
-                                "video": "./assets/video/Sentence 28.mp4"
+                                "audio": "./assets/audio/Sentence 4.mp3",
+                                "video": "./assets/video/Sentence 4.mp4"
                             },
                             {
                                 "number": 29,
-                                "sentence": "捡起了一块儿石头，。",
+                                "sentence": "捡起了一块儿石头。",
                                 "audio": "./assets/audio/Sentence 29.mp3",
                                 "video": "./assets/video/Sentence 29.mp4"
                             }
